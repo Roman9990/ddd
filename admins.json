@@ -1,68 +1,27 @@
 {
   "admins": [
     {
-      "id": "123456789",
-      "tag": "support_master",
-      "role": "Техподдержка",
-      "rating": 4.8,
+      "id": "5518423575",
+      "tag": "owner",
+      "role": "Владелец",
+      "rating": 5.0,
       "status": "available",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      "dialogs_count": 245,
-      "response_time": "2 мин",
-      "specialization": "Технические вопросы"
-    },
-    {
-      "id": "987654321",
-      "tag": "helper_anna",
-      "role": "Консультант",
-      "rating": 4.9,
-      "status": "online",
-      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b25082ba?w=150&h=150&fit=crop&crop=face",
-      "dialogs_count": 189,
-      "response_time": "1 мин",
-      "specialization": "Общие вопросы"
-    },
-    {
-      "id": "555666777",
-      "tag": "expert_pro",
-      "role": "Эксперт",
-      "rating": 4.7,
-      "status": "busy",
-      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      "dialogs_count": 156,
+      "dialogs_count": 0,
       "response_time": "5 мин",
-      "specialization": "Сложные вопросы"
+      "specialization": "Все вопросы"
     },
     {
-      "id": "888999111",
-      "tag": "moderator_alex",
-      "role": "Модератор",
-      "rating": 4.6,
+      "id": "7084662609",
+      "tag": "lox",
+      "role": "Хуй",
+      "rating": 5.0,
       "status": "available",
-      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-      "dialogs_count": 203,
-      "response_time": "3 мин",
-      "specialization": "Модерация и правила"
-    },
-    {
-      "id": "444555666",
-      "tag": "finance_guru",
-      "role": "Финансовый консультант",
-      "rating": 4.9,
-      "status": "online",
-      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-      "dialogs_count": 178,
-      "response_time": "1 мин",
-      "specialization": "Финансовые вопросы"
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "dialogs_count": 1,
+      "response_time": "5 мин",
+      "specialization": "Поддержка"
     }
   ],
-  "unavailable_admins": [
-    {
-      "id": "777888999",
-      "tag": "night_support",
-      "reason": "Нет в сети",
-      "last_seen": "2 часа назад",
-      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face"
-    }
-  ]
+  "unavailable_admins": []
 }
