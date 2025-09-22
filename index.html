@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор Администратора</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="header-text">
+                    <h1>Центр Поддержки</h1>
+                    <p>Выберите администратора для получения помощи</p>
+                </div>
+            </div>
+            <div class="wave"></div>
+        </header>
+
+        <!-- Loading -->
+        <div id="loading" class="loading-screen">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Загружаем список администраторов...</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main id="mainContent" class="main-content hidden">
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-users"></i>
+                        Все
+                    </button>
+                    <button class="filter-btn" data-filter="available">
+                        <i class="fas fa-check-circle"></i>
+                        Доступные
+                    </button>
+                    <button class="filter-btn" data-filter="online">
+                        <i class="fas fa-circle"></i>
+                        Онлайн
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admins List -->
+            <div class="admins-container">
+                <div id="adminsList" class="admins-list">
+                    <!-- Admins will be loaded here -->
+                </div>
+
+                <!-- No admins message -->
+                <div id="noAdmins" class="no-admins hidden">
+                    <div class="no-admins-content">
+                        <i class="fas fa-user-slash"></i>
+                        <h3>Нет доступных администраторов</h3>
+                        <p>В данный момент все администраторы заняты. Попробуйте позже.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rating Modal -->
+        <div id="ratingModal" class="modal hidden">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Оцените администратора</h3>
+                    <button class="modal-close" onclick="closeRatingModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="admin-info-modal">
+                        <div class="admin-avatar-modal">
+                            <img id="modalAdminAvatar" src="" alt="Avatar">
+                        </div>
+                        <div class="admin-details-modal">
+                            <h4 id="modalAdminTag"></h4>
+                            <p id="modalAdminRole"></p>
+                        </div>
+                    </div>
+
+                    <div class="rating-section">
+                        <p>Как вы оцениваете качество поддержки?</p>
+                        <div class="rating-stars">
+                            <i class="fas fa-star star" data-rating="1"></i>
+                            <i class="fas fa-star star" data-rating="2"></i>
+                            <i class="fas fa-star star" data-rating="3"></i>
+                            <i class="fas fa-star star" data-rating="4"></i>
+                            <i class="fas fa-star star" data-rating="5"></i>
+                        </div>
+                        <div class="rating-text">
+                            <span id="ratingText">Выберите оценку</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeRatingModal()">Отмена</button>
+                    <button id="submitRating" class="btn btn-primary" onclick="submitRating()">Оценить</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Action Button -->
+        <div class="fab">
+            <button class="fab-button" onclick="refreshAdmins()">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
